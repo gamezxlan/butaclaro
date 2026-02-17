@@ -7,7 +7,7 @@
     "install:all": "pnpm install --frozen-lockfile",
     
     "build:web": "pnpm --filter web build",
-    "start:web": "pnpm --filter web start -- -p $PORT",
+    "start:web": "pnpm --filter web start",
 
     "build:api": "pnpm --filter api build",
     "start:api": "pnpm --filter api start:prod",
