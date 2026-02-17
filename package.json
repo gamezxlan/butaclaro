@@ -2,10 +2,23 @@
   "name": "butaclaro",
   "private": true,
   "packageManager": "pnpm@9.15.9",
+
   "scripts": {
+    "install:all": "pnpm install --frozen-lockfile",
+    
     "build:web": "pnpm --filter web build",
-    "start:web": "pnpm --filter web start",
+    "start:web": "pnpm --filter web start -- -p $PORT",
+
     "build:api": "pnpm --filter api build",
-    "start:api": "pnpm --filter api start:prod"
+    "start:api": "pnpm --filter api start:prod",
+
+    "build": "pnpm run build:web && pnpm run build:api"
+  },
+
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
