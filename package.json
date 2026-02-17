@@ -1,0 +1,11 @@
+{
+  "name": "butaclaro",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "build:web": "pnpm --filter web build",
+    "start:web": "pnpm --filter web start",
+    "build:api": "pnpm --filter api build",
+    "start:api": "pnpm --filter api start:prod"
+  }
+}
